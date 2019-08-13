@@ -1,0 +1,9 @@
+<aura:component implements="flexipage:availableForAllPageTypes, force:appHostable" access="global" controller="reactController">
+    <aura:attribute name="message" type="string" /> 
+
+        <lightning:container aura:id="jsApp" src="{!$Resource.ReactComponent + '/index.html'}"
+            onmessage="{!c.handleMessage}"
+            onerror="{!c.handleError}"/>
+
+    
+</aura:component>
